@@ -15,7 +15,7 @@ type Point interface {
 // if it contains sufficiently many points, a cluster is started. Otherwise, the point is labeled as
 // noise. Note that this point might later be found in a sufficiently sized ε-environment of a
 // different point and hence be made part of a cluster.
-func Cluster(minDensity int, epsilon float64, points ...Point) (clusters [][]Point) {
+func Cluster(minDensity int, epsilon float64, points []Point) (clusters [][]Point) {
 	visited := make(map[string]bool, len(points))
 	for _, point := range points {
 		neighbours := findNeighbours(point, points, epsilon)

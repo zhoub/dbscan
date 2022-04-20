@@ -75,13 +75,13 @@ func TestExpandCluster(t *testing.T) {
 }
 
 func TestCluster(t *testing.T) {
-	clusters := Cluster(2, 1.0,
+	clusters := Cluster(2, 1.0, []Point{
 		SimplePoint{1},
 		SimplePoint{0.5},
 		SimplePoint{0},
 		SimplePoint{5},
 		SimplePoint{4.5},
-		SimplePoint{4})
+		SimplePoint{4}})
 
 	assert.Equal(t, 2, len(clusters))
 	if 2 == len(clusters) {
@@ -93,6 +93,6 @@ func TestCluster(t *testing.T) {
 func TestClusterNoData(t *testing.T) {
 	log.Println("Executing TestClusterNoData")
 
-	clusters := Cluster(3, 1.0)
+	clusters := Cluster(3, 1.0, nil)
 	assert.Equal(t, 0, len(clusters))
 }
