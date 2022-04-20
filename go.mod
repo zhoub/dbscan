@@ -1,4 +1,4 @@
-module github.com/kelindar/dbscan
+module github.com/raporpe/dbscan
 
 go 1.13
 
