@@ -1,4 +1,4 @@
-module github.com/raporpe/dbscan
+module github.com/zhoub/dbscan
 
 go 1.13
 
